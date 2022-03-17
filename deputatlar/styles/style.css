@@ -4,19 +4,25 @@
     box-sizing: border-box;
 }
 a{
+    color: #555;
     text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
 }
 p{
     text-align: justify;
 }
 .main-box{
-    width: 80%;
+    width: 85%;
     margin: auto;
 }
 .header{
     width: 100%;
     padding: 20px 0;
     overflow: hidden;
+    /* border: 1px solid rebeccapurple; */
+
 }
 .brand{
     width: 50%;
@@ -24,12 +30,13 @@ p{
     overflow: hidden;
 }
 .img{
-    width: 14%;
+    width: 16%;
     float: left;
+    margin-left: 1%;
     /* text-align: right; */
 }
 .name{
-    width: 86%;
+    width: 79%;
     float: right;
     text-align: justify;
     margin-top: 20px;
@@ -41,41 +48,54 @@ p{
 .contact{
     width: 50%;
     float: right;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     text-align: right;
     /* border: 2px solid darkblue; */
 }
-.contact span{
-    color: brown;
-    font-size: larger;
+.contact b{
+    color: #123456;
+    font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-ul{
+.contact span{
+    color: #123456;
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#navbarsExample05 ul{
     margin: 0;
     padding: 0;
     text-align: center;
+    overflow: hidden;
 }
-ul li{
+#navbarsExample05 ul li{
+    /* width: 13%; */
+    margin-right: 10px;
 	list-style-type: none;
-	display: inline-block;
+	/* display: inline-table; */
+    /* border: 1px solid rebeccapurple; */
 }
 .dropbtn{
 	color: white;
-	padding: 12px 20px;
-	font-size: 18px;	
-	text-decoration: none;
+	/* padding: 12px 20px; */
+	font-size: 14px;
+    font-family: sans-serif;
+    /* border: 1px solid blueviolet; */
 }
 .dropbtn:hover{
+    text-decoration: none;
     color: white;
-    background-color: #444;
+    /* background-color: #444; */
 }
 .all-links{
 	display: none;
 	position: absolute;
-	background-color: #555;
+	background-color: rgba(55, 55, 55, 0.7);
 	z-index: 1;	
     width: 80%;
     left: 10%;
+    /* top: 24%; */
+    /* top: 30px; */
     text-align: left;
     overflow: hidden;
 }
@@ -83,6 +103,7 @@ ul li{
     width: 100%;
 	color: #fff;
 	display: block;	
+    font-size: 14px;
 	padding: 10px 20px;
 	text-decoration: none;
     /* border: 1px solid red; */
@@ -108,8 +129,22 @@ ul li{
     width: 50%;
     float: right;
 }
-
-
+.left1, .center1, .right1{
+    display: inline-flexbox;
+    text-align: center;
+    /* justify-content: space-between; */
+}
+.left1{
+    width: 33%;
+    /* float: left; */
+}
+.center1{
+    width: 33%;
+}
+.right1{
+    width: 33%;
+    /* float: right; */
+}
 
 
 
