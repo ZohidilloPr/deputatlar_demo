@@ -130,22 +130,10 @@ p{
     float: right;
 }
 .left1, .center1, .right1{
-    display: inline-flexbox;
+    width: 33%;
     text-align: center;
-    /* justify-content: space-between; */
+    display: inline-table;
 }
-.left1{
-    width: 33%;
-    /* float: left; */
-}
-.center1{
-    width: 33%;
-}
-.right1{
-    width: 33%;
-    /* float: right; */
-}
-
 
 
 
