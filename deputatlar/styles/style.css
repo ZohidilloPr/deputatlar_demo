@@ -102,6 +102,7 @@ p{
 	color: #fff;
 	display: block;	
     font-size: 14px;
+    transition: 1s;
 	padding: 10px 20px;
 	text-decoration: none;
     /* border: 1px solid red; */
@@ -158,6 +159,180 @@ tr td:nth-child(odd){
     width: 100%;
     height: 100vh;
 }
-
+#row{
+    margin: 20px 0;
+}
+.card-person{
+    width: 100%;
+}
+.right2 a{
+    text-decoration: none;
+}
+.right2 a:nth-child(1){
+    color: #0044af;
+}
+.right2 a:nth-child(2){
+    color: #44aaff;
+}
+.right2 a:nth-child(3){
+    color: #ff1199;
+}
+@media screen and (max-width: 480px){
+    .main-box{
+        width: 100%;
+    }
+    .brand{
+        width: 100%;
+    }
+    .img{
+        width: 100%;
+        text-align: center;
+    }
+    .img img{
+        width: 15%;
+        /* margin-left: 80px; */
+    }
+    .name{
+        width: 100%;
+        text-align: center;
+    }
+    .name span{
+        /* margin-left: 20px; */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .contact{
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+    }
+    .bir span, .ikki span{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 19px;
+    }
+    .bir span small, .ikki span small{
+        font-size: 14px;
+    }
+    .all-links{
+        position: relative;
+    }
+    .foot{
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width: 768px){
+    .main-box{
+        width: 100%;
+    }
+    .brand{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .img{
+        width: 100%;
+        text-align: center;
+    }
+    .img img{
+        width: 15%;
+        /* margin-left: 80px; */
+    }
+    .name{
+        width: 100%;
+        text-align: center;
+    }
+    .name span{
+        /* margin-left: 20px; */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .contact{
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+    }
+    .bir span, .ikki span{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 19px;
+    }
+    .bir span small, .ikki span small{
+        font-size: 14px;
+    }
+    .all-links{
+        position: relative;
+        left: 12%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .main-box{
+        width: 90%;
+        margin: auto;
+    }
+    .header{
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .brand{
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .img{
+        /* width: 100%; */
+        /* text-align: center; */
+    }
+    .img img{
+        width: 100%;
+        /* margin-left: 80px; */
+    }
+    .name{
+        /* width: 100%; */
+        text-align: center;
+    }
+    .name span{
+        /* margin-left: 20px; */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .bir span, .ikki span{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+    }
+    .bir span small, .ikki span small{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1200px){
+    #row{
+        margin: 0;
+    }
+    #row #row-col{
+        margin-bottom: 20px;
+    }
+    .card-person{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1201px){
+    #row{
+        margin: 0;
+    }
+    #row #row-col{
+        margin-bottom: 20px;
+    }
+    .card-person{
+        width: 100%;
+    }
+    .name{
+        margin-top: 30px;
+    }
+    .contact{
+        margin-top: 10px;
+    }
+    span small{
+        font-size: 19px;
+    }
+}
 
 
