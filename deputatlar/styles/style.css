@@ -177,12 +177,17 @@ tr td:nth-child(odd){
 .right2 a:nth-child(3){
     color: #ff1199;
 }
-@media screen and (max-width: 480px){
+.foot{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (min-width: 320px) and (max-width: 480px){
     .main-box{
         width: 100%;
     }
     .brand{
         width: 100%;
+        margin-bottom: 20px;
     }
     .img{
         width: 100%;
@@ -190,17 +195,15 @@ tr td:nth-child(odd){
     }
     .img img{
         width: 15%;
-        /* margin-left: 80px; */
     }
     .name{
         width: 100%;
         text-align: center;
     }
     .name span{
-        /* margin-left: 20px; */
-        font-family: 'Times New Roman', Times, serif;
         font-size: 16px;
         font-weight: bolder;
+        font-family: 'Times New Roman', Times, serif;
     }
     .contact{
         width: 100%;
@@ -209,10 +212,10 @@ tr td:nth-child(odd){
     }
     .bir span, .ikki span{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 19px;
+        font-size: 17px;
     }
     .bir span small, .ikki span small{
-        font-size: 14px;
+        font-size: 11px;
     }
     .all-links{
         position: relative;
@@ -221,13 +224,14 @@ tr td:nth-child(odd){
         justify-content: space-around;
     }
 }
-@media screen and (max-width: 768px){
+@media screen and (min-width: 481px) and (max-width: 768px){
     .main-box{
         width: 100%;
     }
     .brand{
         width: 80%;
         margin-left: 10%;
+        margin-bottom: 20px;
     }
     .img{
         width: 100%;
@@ -244,7 +248,7 @@ tr td:nth-child(odd){
     .name span{
         /* margin-left: 20px; */
         font-family: 'Times New Roman', Times, serif;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: bolder;
     }
     .contact{
@@ -254,17 +258,21 @@ tr td:nth-child(odd){
     }
     .bir span, .ikki span{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 19px;
+        font-size: 23px;
     }
     .bir span small, .ikki span small{
-        font-size: 14px;
+        font-size: 15px;
     }
     .all-links{
         position: relative;
         left: 12%;
     }
+    .foot{
+        display: flex;
+        justify-content: space-around;
+    }
 }
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
     .main-box{
         width: 90%;
         margin: auto;
@@ -276,10 +284,6 @@ tr td:nth-child(odd){
     .brand{
         display: inline-flex;
         justify-content: space-between;
-    }
-    .img{
-        /* width: 100%; */
-        /* text-align: center; */
     }
     .img img{
         width: 100%;
@@ -303,7 +307,7 @@ tr td:nth-child(odd){
         font-size: 14px;
     }
 }
-@media screen and (max-width: 1200px){
+@media screen and (min-width: 1025px) and (max-width: 1200px){
     #row{
         margin: 0;
     }
