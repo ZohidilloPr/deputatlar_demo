@@ -1,0 +1,176 @@
+{% load static %}
+<div class="main-box">
+    <div class="header">
+        <div class="brand">
+            <div class="img">
+                <img src="{% static 'images/logo.svg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="name">
+                <span>Халқ депутатлари Тошкент вилояти <br> Кенгаши котибияти</span>
+            </div>
+        </div>
+        <!-- <br> -->
+        <div class="contact">
+            <div class="bir">
+                <span><small>(+998 99)</small> 336 15-55</span>
+            </div>
+            <div class="ikki">
+                <span><small>(+998 99)</small> 336 15-55</span>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" aria-label="Fifth navbar example">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="#">Expand at lg</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <div class="hoverdrop">
+                <a href="#" class="dropbtn">Кенгаши котибияти</a>
+                <div class="all-links">
+                  <div class="left">
+                      <a href="#">Tashkil topishi</a>
+                      <!-- <a href="#">link 2</a>
+                      <a href="#">link 3</a> -->
+                  </div>
+                  <div class="right">
+                      <a href="#">Faoliyati</a>
+                      <!-- <a href="#">link 2</a>
+                      <a href="#">link 3</a> -->
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="hoverdrop">
+                <a href="{% url 'app:all_xodim' %}" class="dropbtn">Кенгашига сайланган депутатлар</a>
+                <!-- <div class="all-links">
+                  <div class="left">
+                      <a href="#">link 1</a>
+                      <a href="#">link 2</a>
+                      <a href="#">link 3</a>
+                  </div>
+                  <div class="right">
+                      <a href="#">link 1</a>
+                      <a href="#">link 2</a>
+                      <a href="#">link 3</a>
+                  </div>
+                </div> -->
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="hoverdrop">
+                <a href="#" class="dropbtn">Кенгаши доимий комиссиялари</a>
+                <div class="all-links">
+                  <div class="left">
+                      <a href="#">Komisia 1</a>
+                      <a href="#">Komisia 2</a>
+                      <a href="#">Komisia 3</a>
+                      <a href="#">Komisia 4</a>
+                  </div>
+                  <div class="right">
+                      <a href="#">Komisia 5</a>
+                      <a href="#">Komisia 6</a>
+                      <a href="#">Komisia 7</a>
+                      <a href="#">Komisia 8</a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="hoverdrop">
+                <a href="#" class="dropbtn">Туман ва шаҳар Кенгаши котибияти</a>
+                <div class="all-links">
+                  <div class="left1">
+                      <a href="{% url 'app:tuman_xodim' %}">Angen Shaxar</a>
+                      <a href="#">Bo'ka tumani</a>
+                      <a href="#">Bekobod tumani</a>
+                      <a href="#">Bekobod Shaxri</a>
+                      <a href="#">Bo'stonliq tumani</a>
+                      <a href="#">Chinoz tumani</a>
+                      <a href="#">Chirchiq Shaxri</a>
+                  </div>
+                  <div class="center1">
+                      <a href="#">Ohangaron tumani</a>
+                      <a href="#">Olmaliq shaxar</a>
+                      <a href="#">Oqqo'rg'on tumani</a>
+                      <a href="#">O'rta chirchiq tumani</a>
+                      <a href="#">Parkent tumani</a>
+                      <a href="#">Piskent tumani</a>
+                      <a href="#">Qibray tumani</a>
+                  </div>
+                  <div class="right1">
+                      <a href="#">Quyi chirchiq tumani</a>
+                      <a href="#">Yangi yo'l tumani</a>
+                      <a href="#">Yuqori chirchiq tumani</a>
+                      <a href="#">Zangiota tumani</a>
+                      <a href="#">Nurafshon shaxar</a>
+                      <a href="#">Ohangaron shaxar</a>
+                      <a href="#">YangiYo'l shaxar</a>
+                      <a href="#">Toshkent tumani</a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="hoverdrop">
+                <a href="#" class="dropbtn">Туман ва шаҳар Кенгаши доимий комиссиялари</a>
+                <div class="all-links">
+                  <div class="left">
+                      <a href="#">link 1</a>
+                      <a href="#">link 2</a>
+                      <a href="#">link 3</a>
+                  </div>
+                  <div class="right">
+                      <a href="#">link 1</a>
+                      <a href="#">link 2</a>
+                      <a href="#">link 3</a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="hoverdrop">
+                <a href="#" class="dropbtn">депутатлар фаолияти</a>
+                <div class="all-links">
+                  <div class="left">
+                      <a href="#">link 1</a>
+                      <a href="#">link 2</a>
+                      <a href="#">link 3</a>
+                  </div>
+                  <div class="right">
+                      <a href="#">link 1</a>
+                      <a href="#">link 2</a>
+                      <a href="#">link 3</a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="hoverdrop">
+                <a href="#" class="dropbtn">Кенгаши ҳужжатлари</a>
+                <div class="all-links">
+                  <div class="left">
+                      <a href="#">Ish reja</a>
+                      <!-- <a href="#">link 2</a>
+                      <a href="#">link 3</a> -->
+                  </div>
+                  <div class="right">
+                      <!-- <a href="#">link 1</a>
+                      <a href="#">link 2</a>
+                      <a href="#">link 3</a> -->
+                  </div>
+                </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+</nav>
+

@@ -1,0 +1,74 @@
+{% extends "../index.html" %}
+{% load static %}
+{% block title %}
+    Bosh sahifa
+{% endblock title %}
+
+
+{% block content %}
+    {% include "../header&navbar/navbar.html" %}
+    <div class="main-box my-5">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                {% include "../left_side/left_side.html" %}
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
+                <div class="row mb-3 box">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Bosh sahifa</a></li>
+                        <li class="breadcrumb-item"><a href="#">Туман ва шаҳар Кенгаши котибияти</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Angeren shaxar</li>
+                        </ol>
+                    </nav>
+                    <div class="col-4">
+                        <img src="https://www.pngitem.com/pimgs/m/106-1068071_black-person-png-black-man-business-png-transparent.png" width="300" class="img-fluid rounded-start" alt="">
+                    </div>
+                    <div class="col-8 pt-5">
+                        <h4>Jhon Doe</h4>
+                        <table class="table">
+                            <tr>
+                                <td>Telefon raqami</td>
+                                <td>+998 99 656 2858</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>admin@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Faks</td>
+                                <td>+998 99 656 2858</td>
+                            </tr>
+                        </table>
+                        <a href="full_cv.html">To'liq CV >>></a>
+                    </div>
+                </div>
+                <div class="row mb-3 box">
+                    <div class="col-8 pt-5">
+                        <h4>Jhon Doe</h4>
+                        <table class="table">
+                            <tr>
+                                <td>Telefon raqami</td>
+                                <td>+998 99 656 2858</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>admin@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Faks</td>
+                                <td>+998 99 656 2858</td>
+                            </tr>
+                        </table>
+                        <a href="full_cv.html">To'liq CV >>></a>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://www.pngitem.com/pimgs/m/106-1068071_black-person-png-black-man-business-png-transparent.png" width="300" class="img-fluid rounded-start" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "../footer/footer.html" %}
+
+{% endblock content %}

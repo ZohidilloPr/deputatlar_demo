@@ -1,0 +1,50 @@
+{% extends "../index.html" %}
+
+{% block title %}
+    Barcha deputatlar
+{% endblock title %}
+
+{% block content %}
+    {% include "../header&navbar/navbar.html" %}
+    <div class="main-box">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                {% include "../left_side/left_side.html" %}
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 mt-3">
+                <div class="box-xodim">
+                    <div class="box-top">
+                        <img src="https://st2.depositphotos.com/3143277/8644/i/600/depositphotos_86446164-stock-photo-business-man-in-office.jpg" alt="">
+                    </div>
+                    <div class="box-bottom">
+                        <div class="box-title">
+                            <div class="lavozim">
+                                <h4>UzLiberar Partiyasi</h4>
+                            </div>
+                            <div class="box-name">
+                                <h3>Jhon Doe</h3>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table class="table">
+                                <tr>
+                                    <td>Telefon</td>
+                                    <td>+998 99 325 65-55</td>
+                                </tr>
+                                <tr>
+                                    <td>Faks</td>
+                                    <td>+998 99 325 65-55</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>admin@gmail.com</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "../footer/footer.html" %}
+{% endblock content %}

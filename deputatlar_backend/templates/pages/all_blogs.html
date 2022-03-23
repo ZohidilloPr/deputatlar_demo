@@ -1,0 +1,53 @@
+{% extends "../index.html" %}
+{% load static %}
+{% block title %}
+    Bosh sahifa
+{% endblock title %}
+
+
+{% block content %}
+    {% include "../header&navbar/navbar.html" %}
+    <div class="main-box my-5">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-3 mt-3">
+                {% include "../left_side/left_side.html" %}
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-6">
+               
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-3 my-3" id="vakant">
+                <div class="row" id="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-12" id="row-col">
+                        <div class="card card-person">
+                            <img src="https://siformations.com/wp-content/uploads/2019/05/team2.jpg" height="400" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Jhon Doe</h5>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Tel nomer: 996634474</li>
+                                <li class="list-group-item">Email: admin@gmail.com</li>
+                                <li class="list-group-item">faks: 985 1454 7474</li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-12">
+                        <!-- <div class="card card-person">
+                            <img src="https://sever-press.ru/wp-content/uploads/2019/01/28012019_rab.jpg" height="385" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Yangi vakansiya <br> Bizga murojat eting </p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Tel nomer: 996634474</li>
+                                <li class="list-group-item">Email: admin@gmail.com</li>
+                                <li class="list-group-item">faks: 985 1454 7474</li>
+                            </ul>
+                          </div>         -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "../footer/footer.html" %}
+
+{% endblock content %}
