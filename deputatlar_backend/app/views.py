@@ -10,3 +10,5 @@ def Xodimlar(request):
 
 def tuman_xodimlar(request):
     return render(request, 'pages/tuman_deputatlari.html')
+def admin(request):
+    return render(request, 'admin_page/sidebar.html')

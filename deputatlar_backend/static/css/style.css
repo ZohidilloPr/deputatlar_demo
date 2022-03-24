@@ -1,7 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    list-style-type: none;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 a{
     color: #900000;
@@ -184,7 +186,6 @@ tr td:nth-child(odd){
     justify-content: space-between;
 }
 
-
 @media screen and (min-width: 320px) and (max-width: 480px){
     .main-box{
         width: 100%;
@@ -343,4 +344,50 @@ tr td:nth-child(odd){
     }
 }
 
+.left-sidebar{
+	transition: 0.5s;
+	width: 50%;
+	height: 100vh;
+	margin-left: -40.99%;
+	background-color: rgba(10, 140, 140, 0.9);
+}
+.left-sidebar:hover{
+	margin-left: 0;
+}
+.brand-sidebar{
+	height: 27%;
+	text-align: center;
+	margin-bottom: 25px;
+	background-size: cover;
+	background-position: center;
+	background-image: url("https://www.welovesolo.com/wp-content/uploads/vector/13/Magic-universe-space-vector-background-17.jpg");
+	/*border: 1px solid darkred;*/
+}
+.brand-sidebar img{
+	top: 35%;
+	color: white;
+	border-radius: 100%;
+	position: relative;
+	/*border: 1px solid red;*/
+}
+
+.left-sidebar ul li{
+	transition: 0.5s;
+	padding: 10px 20px;
+	margin-bottom: 15px;
+	list-style-type: none;
+}
+.left-sidebar ul li a{
+	color: #fff;
+	font-size: 1.5em;
+	text-decoration: none;
+}
+.left-sidebar ul li:hover{
+	padding-left: 60px;
+	background-color: hsl(444430, 90%, 25%);
+}
+.left-sidebar ul li:nth-child(7):hover{
+	padding-left: 60px;	
+	background-color: hsl(0, 90%, 25%);	
+}
 

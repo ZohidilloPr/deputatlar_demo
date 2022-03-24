@@ -1,6 +1,16 @@
+import imghdr
+from operator import truediv
+from pyexpat import model
+from statistics import mode
 from django.db import models
 
 # Create your models here.
+
+lavozim = (
+    ('Komissia rayisi', 'Komissia rayisi'),
+    ('Komissia rayisi o\'rinbosari', 'Komissia rayisi o\'rinbosari'),
+    ('Komissia azolari', 'Komissia azolari'),
+)
 class TownsName(models.Model):
     name = models.CharField(max_length=20, verbose_name="Tuman Nomi")
     add_date = models.DateTimeField(auto_now_add=True)
@@ -30,5 +40,18 @@ class Kamisa(models.Model):
     add_date = models.DateTimeField(auto_now_add=True)
 
 class KamisaAzo(models.Model):
+    kamisa = models.ForeignKey(Kamisa, verbose_name="Qaysi kamisaga azo", on_delete=models.CASCADE)
     f_name = models.CharField(max_length=100, verbose_name="To'liq ismi")
+    lavozim_type = models.CharField(max_length=50, verbose_name="Lavozim turi", choices=lavozim, default='Komissia azolari')
+    lavozim_now = models.CharField(max_length=250, verbose_name="Hozirgi egallab turgan lavozimi")
+    number = models.CharField(verbose_name="Saylangan saylov okrugi", max_length=25)
+    add_date = models.DateTimeField(auto_now_add=True)
     
+    def __str__(self):
+        return self.f_name
+    
+class Blogs(models.Model):
+    image = models.ImageField(verbose_name="Yangilik uchun rasim")
+    title = models.CharField(verbose_name="Sarlavha", unique=True, max_length=200)
+    blog = models.TextField(verbose_name="Maqola")
+    add_date = models.DateTimeField(verbose_name=("Published date"), auto_now_add=True)
