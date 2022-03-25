@@ -5,13 +5,6 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-a{
-    color: #900000;
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
-}
 p{
     text-align: justify;
 }
@@ -148,10 +141,10 @@ p{
     color: #fff;
     text-decoration: none;
 }
-#sidebarnav ul li:hover, .now{
-    color: #fff;
-    background-color: #123456;
+#sidebarnav ul li:hover{
+    background-color: hsla(995599, 30%, 20%, 0.9);
 }
+
 tr td:nth-child(odd){
     font-weight: bolder;
 }

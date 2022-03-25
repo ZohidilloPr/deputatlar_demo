@@ -6,6 +6,18 @@
 
 
 {% block content %}
+    <style>
+        .now{
+            background-color: hsla(995599, 30%, 20%, 0.9);
+        }
+        .now a{
+            color: #fff;
+        }
+        span a:hover{
+            color: black;
+            text-decoration: none;
+        }
+    </style>
     {% include "../header&navbar/navbar.html" %}
     <div class="main-box my-5">
         <div class="row">
@@ -40,7 +52,7 @@
                 <div class="row mb-3 box">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../index.html">Bosh sahifa</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'app:Home' %}">Bosh sahifa</a></li>
                         <li class="breadcrumb-item"><a href="#">Туман ва шаҳар Кенгаши котибияти</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Angeren shaxar</li>
                         </ol>
@@ -64,7 +76,9 @@
                                 <td>+998 99 656 2858</td>
                             </tr>
                         </table>
-                        <a href="full_cv.html">To'liq CV >>></a>
+                        <span>
+                            <a href="{% url 'app:cv' %}">To'liq CV >>></a>
+                        </span>
                     </div>
                 </div>
                 <div class="row mb-3 box">
@@ -84,7 +98,7 @@
                                 <td>+998 99 656 2858</td>
                             </tr>
                         </table>
-                        <a href="full_cv.html">To'liq CV >>></a>
+                        <a href="{% url 'app:cv' %}">To'liq CV >>></a>
                     </div>
                     <div class="col-4">
                         <img src="https://www.pngitem.com/pimgs/m/106-1068071_black-person-png-black-man-business-png-transparent.png" width="300" class="img-fluid rounded-start" alt="">

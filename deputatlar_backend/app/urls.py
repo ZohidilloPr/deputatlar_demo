@@ -6,7 +6,8 @@ from .views import (
     admin,
     doimiy_komisalar,
     all_blog,
-    Work_plan
+    Work_plan,
+    cv,
 )
 
 app_name = 'app'
@@ -19,5 +20,6 @@ urlpatterns = [
     path('komisia/doimiy/', doimiy_komisalar, name="DK"),
     path('all/blogs/', all_blog, name="AB"),
     path('ish/reja/', Work_plan, name="WP"),
+    path('cv/', cv, name="cv"),
 ]
 

@@ -16,9 +16,17 @@
           
         {% endblock title %}
     </title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: black;
+        }
+    </style>
   </head>
   <body>
-    <a href="{% url 'app:admin' %}">Admin</a>
+    <!-- <a href="{% url 'app:admin' %}">Admin</a> -->
     {% block content %}
       
     {% endblock content %}

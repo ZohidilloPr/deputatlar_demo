@@ -16,6 +16,8 @@ def all_blog(request):
     return render(request, 'pages/all_blogs.html')
 def Work_plan(request):
     return render(request, 'pages/ish_reja.html')
+def cv(request):
+    return render(request, 'pages/full_cv.html')
 
 
 

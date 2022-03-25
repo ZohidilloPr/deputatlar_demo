@@ -1,0 +1,23 @@
+{% extends "../index.html" %}
+{% load static %}
+{% block title %}
+    Not Found
+{% endblock title %}
+
+{% block content %}
+    {% include "../header&navbar/navbar.html" %}
+    <div class="main-box">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                {% include "../left_side/left_side.html" %}
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9 mt-3">
+                <div class="col-12 mb-5">
+                    <embed class="w-100" height="900" src="{% static 'files/file2.pdf' %}" type="text/pdf">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "../footer/footer.html" %}
+  
+{% endblock content %}
