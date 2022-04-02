@@ -4,12 +4,14 @@
         color: aliceblue;
     }
 </style>
-<div class="main-box">
-    <div class="header">
+<div class="header">
+      <div class="main-box">
         <div class="brand">
             <div class="img">
-                <img src="{% static 'images/logo.svg' %}" class="img-fluid" alt="">
-            </div>
+                <a href="{% url 'app:Home' %}">
+                  <img src="{% static 'images/logo.svg' %}" class="img-fluid" alt="">
+                </a>
+              </div>
             <div class="name">
                 <span>Халқ депутатлари Тошкент вилояти <br> Кенгаши котибияти</span>
             </div>
@@ -17,7 +19,8 @@
         <!-- <br> -->
         <div class="contact">
             <div class="bir">
-                <span><small>(+998 99)</small> 336 15-55</span>
+                <span>Ishonch Telefoni <i class="fa-solid fa-phone"></i></span><br>
+                <span></i> <small>(+998 99)</small> 336 15-55</span>
             </div>
             <div class="ikki">
                 <span><small>(+998 99)</small> 336 15-55</span>
