@@ -5,13 +5,6 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-a{
-    color: #900000;
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
-}
 p{
     text-align: justify;
 }
@@ -21,8 +14,13 @@ p{
 }
 .header{
     width: 100%;
-    padding: 20px 0;
+    height: 30vh;
+    padding: 60px 0;
     overflow: hidden;
+    background: linear-gradient(rgba(84, 180, 167, 0.26),rgba(84, 180, 200, 0.26)), url("https://ak.picdn.net/shutterstock/videos/1038439316/thumb/1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     /* border: 1px solid rebeccapurple; */
 
 }
@@ -44,8 +42,9 @@ p{
     margin-top: 20px;
 }
 .name span{
+    color: white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: larger;
+    font-size: 32px;
 }
 .contact{
     margin: 0;
@@ -148,16 +147,21 @@ p{
     color: #fff;
     text-decoration: none;
 }
-#sidebarnav ul li:hover, .now{
-    color: #fff;
-    background-color: #123456;
+#sidebarnav ul li:hover{
+    background-color: hsla(995599, 30%, 20%, 0.9);
 }
+
 tr td:nth-child(odd){
     font-weight: bolder;
 }
 .box{
     width: 80%;
     margin: auto;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.box:hover, .box-sh:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .embed{
     width: 100%;
@@ -169,23 +173,69 @@ tr td:nth-child(odd){
 .card-person{
     width: 100%;
 }
-.right2 a{
-    text-decoration: none;
+.footer-span span{
+    padding: 25px 0 10px 0;
+    font-size: 1.5em;
 }
-.right2 a:nth-child(1){
-    color: #0044af;
+.box-sh{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-.right2 a:nth-child(2){
-    color: #44aaff;
+#social{
+    top: 45%;
+    left: 0;
+    position: fixed;
+    overflow: hidden;
 }
-.right2 a:nth-child(3){
-    color: #ff1199;
+#social label{
+    color: #fff;
+    font-size: 2em;
+    padding: 1px 6px;
+    background-color: #555;
 }
-.foot{
-    display: flex;
-    justify-content: space-between;
+#social ul{
+    margin-left: -150px;
+    padding: 0;
 }
-
+#social ul li{
+    width: 150px;
+    color: #fff;
+    padding: 10px;
+    transition: 1s;
+    background-color: #333;
+    /* border: 1px solid red; */
+}
+#social ul li a i{
+    float: right;
+    margin-left: 5px;
+    font-size: 1.5em;
+}
+#chk{
+    display: none;
+}
+#chk:checked + #social ul{
+    margin-left: -108px;
+}
+#social ul li:hover{
+    margin-left: 108px;
+    background: linear-gradient(to left, rgba(18, 77, 69, 0.9),rgba(84, 180, 167, 0.26));
+}
+#top{
+    right: 2%;
+    bottom: 5%;
+    position: fixed;
+}
+#top a{
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #555;
+}
+#top a:hover{
+    background-color: #777;
+}
+#top a i{
+    font-size: 2em;
+    color: #fff;
+}
 @media screen and (min-width: 320px) and (max-width: 480px){
     .main-box{
         width: 100%;
