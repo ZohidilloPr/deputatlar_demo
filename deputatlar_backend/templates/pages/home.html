@@ -131,7 +131,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Biron taklifingiz bormi ?</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <button type="button"  id="tkbtn" class="btn btn-primary">Taklif Jonatish</button>
                             </div>
                             </div>   
                         </div> 
@@ -139,6 +139,33 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div id="comment" class="box-sh">
+            <button type="button" class="border-0" id="tkexit"><i class="fa-solid fa-circle-xmark"></i></button>
+            <h3 align="center" class="mb-5">Asslomu aleykum</h3>
+            <h5 align="center">Taklif yoki shikoyatingizni qoldiring.</h5>
+            <form action="">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Akrom Akromov">
+                    <label for="floatingInput">To'liq Ismingiz ?</label>
+                  </div>
+                <div class="form-floating mb-3">
+                    <input type="tel" class="form-control" id="floatingInput" placeholder="332300701">
+                    <label for="floatingInput">Telefon raqamingiz ?</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingPassword" placeholder="Taklif">
+                    <label for="floatingPassword">Taklif Mazmuni</label>
+                  </div>
+                  <br>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Izohingizni qoldiring" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Izoh</label>
+                  </div>
+                  <div class="d-grid gap-2 mt-3">
+                        <input type="submit" value="Jo'natish" class="btn btn-outline-primary">
+                  </div>
+            </form>
     </div>
     {% include "../footer/footer.html" %}
 

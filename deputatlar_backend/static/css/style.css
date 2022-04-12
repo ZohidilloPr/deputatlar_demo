@@ -236,6 +236,36 @@ tr td:nth-child(odd){
     font-size: 2em;
     color: #fff;
 }
+#foot{
+    width: 100%;
+}
+.foot-nav #foot li{
+    width: 10%;
+    display: inline-flex;
+    justify-content: space-around;
+}
+#comment{
+    top: 10%;
+    right: 5%;
+    width: 25%;
+    height: 60vh;
+    padding: 50px;
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    transition: 1s ease-in-out;
+}
+#tkexit{
+    right: 0;
+    top: -7px;
+    font-size: 1.5em;
+    background: none;
+    position: absolute;
+    color: hsl(444444, 40%, 25%);
+}
+#tkexit:hover{
+    color: hsl(0, 90%, 25%);
+}
 @media screen and (min-width: 320px) and (max-width: 480px){
     .main-box{
         width: 100%;
