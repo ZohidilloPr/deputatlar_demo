@@ -181,7 +181,7 @@ tr td:nth-child(odd){
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 #social{
-    top: 45%;
+    top: 25%;
     left: 0;
     position: fixed;
     overflow: hidden;
@@ -265,6 +265,34 @@ tr td:nth-child(odd){
 }
 #tkexit:hover{
     color: hsl(0, 90%, 25%);
+}
+#web-map{
+    padding: 30px 15px;
+}
+#web-map h3{
+    margin: 20px 0;
+}
+#web-map .map{
+    height: 40vh;
+    padding: 20px 10px;
+    overflow: scroll;
+    background-color: #eee;
+}
+.map a{
+    font-size: 1.1em;
+    color: #333;
+}
+.map a:hover{
+    color: cyan;
+}
+.map ul{
+    display: none;
+}
+.map ul li {
+    list-style-type: disc;
+}
+.map ul li ol li{
+    list-style-type: circle;
 }
 @media screen and (min-width: 320px) and (max-width: 480px){
     .main-box{
