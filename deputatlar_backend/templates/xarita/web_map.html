@@ -5,7 +5,7 @@
             <button class="nav-link" aria-current="page" role="button" href="#" id="nav1">Lorem, ipsum dolor.</button>
         </li>
         <li class="nav-item dropdown">
-            <button class="nav-link" href="#" aria-current="page" id="nav2">Lorem, ipsum dolor.</button>
+            <button class="nav-link" href="#" aria-current="page" id="nav2">Tuman va shaxar</button>
         </li>
         <li class="nav-item">
             <button class="nav-link" href="#" id="nav3">lorem</button>
@@ -63,51 +63,19 @@
             </li>
         </ul>
         <ul id="map2">
-            <li>
-                <a href="#">2Lorem ipsum dolor sit amet.
+            {% for i in tum %}
+                <li>
+                    <div class="grid-item">
+                        <a href="#">{{ i.name }}</a>
+                    </div>
+                </li>
+            {% endfor %}
+            <!-- <li>
+                <a href="#">Tuman Va shaxar
                     <ol>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
                     </ol>
                 </a>
-            </li>
-            <li>
-                <a href="#">Lorem ipsum dolor sit amet.
-                    <ol>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                    </ol>
-                </a>
-            </li>
-            <li>
-                <a href="#">Lorem ipsum dolor sit amet.
-                    <ol>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                    </ol>
-                </a>
-            </li>
+            </li> -->
         </ul>
         <ul id="map3">
             <li>

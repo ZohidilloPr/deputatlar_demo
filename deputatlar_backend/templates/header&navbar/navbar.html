@@ -75,18 +75,13 @@
             <div class="hoverdrop">
                 <a href="#" class="dropbtn">Кенгаши доимий комиссиялари</a>
                 <div class="all-links">
-                  <div class="left">
-                      <a href="{% url 'app:DK' %}">Maxalliy Budjet, Iqsodiy isloxatlarni amalga oshirish.......</a>
-                      <a href="#">Komisia 2</a>
-                      <a href="#">Komisia 3</a>
-                      <a href="#">Komisia 4</a>
-                  </div>
-                  <div class="right">
-                      <a href="#">Komisia 5</a>
-                      <a href="#">Komisia 6</a>
-                      <a href="#">Komisia 7</a>
-                      <a href="#">Komisia 8</a>
-                  </div>
+                    <div class="grid-con">
+                        {% for i in komissia %}
+                            <div class="grid-item">
+                                <a href="#">{{ i.name|truncatechars:20 }}</a>
+                            </div>
+                        {% endfor %}
+                      </div>
                 </div>
             </div>
           </li>
@@ -94,7 +89,14 @@
             <div class="hoverdrop">
                 <a href="#" class="dropbtn">Туман ва шаҳар Кенгаши котибияти</a>
                 <div class="all-links">
-                  <div class="left1">
+                  <div class="grid-con">
+                    {% for i in tum %}
+                        <div class="grid-item">
+                            <a href="#">{{ i.name }}</a>
+                        </div>
+                    {% endfor %}
+                  </div>
+                  <!-- <div class="left1">
                       <a href="{% url 'app:tuman_xodim' %}">Angen Shaxar</a>
                       <a href="#">Bo'ka tumani</a>
                       <a href="#">Bekobod tumani</a>
@@ -121,7 +123,7 @@
                       <a href="#">Ohangaron shaxar</a>
                       <a href="#">YangiYo'l shaxar</a>
                       <a href="#">Toshkent tumani</a>
-                  </div>
+                  </div> -->
                 </div>
             </div>
           </li>

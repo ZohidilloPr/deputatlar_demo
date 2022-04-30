@@ -1,7 +1,3 @@
-import imghdr
-from operator import truediv
-from pyexpat import model
-from statistics import mode
 from django.db import models
 
 # Create your models here.
@@ -12,7 +8,7 @@ lavozim = (
     ('Komissia azolari', 'Komissia azolari'),
 )
 class TownsName(models.Model):
-    name = models.CharField(max_length=20, verbose_name="Tuman Nomi")
+    name = models.CharField(max_length=50, verbose_name="Tuman Nomi", unique=True)
     add_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -35,12 +31,15 @@ class Deputat(models.Model):
     def __str__(self):
         return self.f_name
 
-class Kamisa(models.Model):
-    name = models.CharField(max_length=250, verbose_name="Kamisa nomi")
+class Komissia(models.Model):
+    name = models.CharField(max_length=500, verbose_name="Komissia nomi", unique=True)
     add_date = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.name
 
-class KamisaAzo(models.Model):
-    kamisa = models.ForeignKey(Kamisa, verbose_name="Qaysi kamisaga azo", on_delete=models.CASCADE)
+class KomissiaAzo(models.Model):
+    komissia = models.ForeignKey(Komissia, verbose_name="Qaysi komissiaga azo", on_delete=models.CASCADE)
     f_name = models.CharField(max_length=100, verbose_name="To'liq ismi")
     lavozim_type = models.CharField(max_length=50, verbose_name="Lavozim turi", choices=lavozim, default='Komissia azolari')
     lavozim_now = models.CharField(max_length=250, verbose_name="Hozirgi egallab turgan lavozimi")
