@@ -4,10 +4,15 @@ from .models import *
 
 tumvash = TownsName.objects.all()
 komisia = Komissia.objects.all()
+blogs = Blogs.objects.all()
+list = [1, 2, 3, 4, 5]
 def Home(request):
+    last_blog = blogs.order_by("-add_date")
     context = {
         "tum": tumvash,
         "komissia":komisia,
+        "last_blog":last_blog,
+        "list":list,
     }
     return render(request, 'pages/home.html', context)
 def Xodimlar(request):
@@ -31,6 +36,7 @@ def doimiy_komisalar(request):
     context = {
         "tum": tumvash,
         "komissia":komisia,
+        'list': list.length,
     }
     return render(request, 'pages/doimiy_komisia.html', context)
 
@@ -38,8 +44,9 @@ def all_blog(request):
     context = {
         "tum": tumvash,
         "komissia":komisia,
+        'list':list,
     }
-    return render(request, 'pages/all_blogs.html', content)
+    return render(request, 'pages/all_blogs.html', context)
 
 def Work_plan(request):
     context = {

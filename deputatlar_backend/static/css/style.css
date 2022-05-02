@@ -300,6 +300,25 @@ tr td:nth-child(odd){
     display: grid;
     grid-template-columns: auto auto auto;
 }
+#row-col .senat{
+    display: none;
+}
+#row-col .is_active{
+    display: block;
+}
+.control{
+    padding: 10px 0;
+    font-size: larger;
+    text-align: center;
+}
+.control .center{
+    margin: 0 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.prev, .next{
+    z-index: 100;
+    cursor: pointer;
+}
 @media screen and (min-width: 320px) and (max-width: 480px){
     .main-box{
         width: 100%;

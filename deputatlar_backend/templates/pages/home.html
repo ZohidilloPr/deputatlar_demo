@@ -33,75 +33,31 @@
                   </div>
                   <br><br>
                 <div class="new">
-                    <div class="row m-auto">
-                    <div class="card border-0 my-3 p-2 box-sh" style="width: 85%; margin: auto;">
-                        <div class="row g-0">
-                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-2">
-                            <img src="https://www.viewhotels.jp/ryogoku/wp-content/uploads/sites/9/2020/03/test-img.jpg" class="h-100 img-fluid rounded-start" alt="...">
+                    {% for i in list %}
+                        <div class="row m-auto">
+                            <div class="card border-0 my-3 p-2 box-sh" style="width: 85%; margin: auto;">
+                                <div class="row g-0">
+                                    <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-2">
+                                    <img src="https://www.viewhotels.jp/ryogoku/wp-content/uploads/sites/9/2020/03/test-img.jpg" class="h-100 img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                                    <div class="card-body pt-0">
+                                        <h5 class="card-title">
+                                            <a href="#" class="">
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, accusantium.
+                                            </a>
+                                        </h5>
+                                        <p class="card-text">
+                                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt.
+                                        </p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                            <div class="card-body pt-0">
-                                <h5 class="card-title">
-                                    <a href="#" class="">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, accusantium.
-                                    </a>
-                                </h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt.
-                                </p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="row m-auto">
-                    <div class="card border-0 my-3 p-2 box-sh" style="width: 85%; margin: auto;">
-                        <div class="row g-0">
-                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-2">
-                            <img src="https://www.viewhotels.jp/ryogoku/wp-content/uploads/sites/9/2020/03/test-img.jpg" class="h-100 img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                            <div class="card-body pt-0">
-                                <h5 class="card-title">
-                                    <a href="#" class="">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, accusantium.
-                                    </a>
-                                </h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt.
-                                </p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="row m-auto">
-                    <div class="card border-0 my-3 p-2 box-sh" style="width: 85%; margin: auto;">
-                        <div class="row g-0">
-                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-2">
-                            <img src="https://www.viewhotels.jp/ryogoku/wp-content/uploads/sites/9/2020/03/test-img.jpg" class="h-100 img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                            <div class="card-body pt-0">
-                                <h5 class="card-title">
-                                    <a href="#" class="">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, accusantium.
-                                    </a>
-                                </h5>
-                                <p class="card-text">
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt.
-                                </p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                        </div>  
+                    {% endfor %}
                 </div>
                 <div class="">
                     <p class="text-end">
@@ -112,7 +68,12 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-3 my-3" id="vakant">
                 <div class="row" id="row">
                     <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-12" id="row-col">
-                        <div class="card card-person box-sh" style="width: 75%; margin: auto;">
+                        <div class="card card-person box-sh senat is_active" style="width: 75%; margin: auto;">
+                            <div class="control">
+                                <span class="prev"><i class="fa-solid fa-arrow-left"></i></span>
+                                <span class="center">Senatorlar</span>
+                                <span class="next"><i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
                             <img src="https://siformations.com/wp-content/uploads/2019/05/team2.jpg" height="400" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Jhon Doe</h5>
@@ -123,7 +84,58 @@
                                 <li class="list-group-item">Email: admin@gmail.com</li>
                                 <li class="list-group-item">faks: 985 1454 7474</li>
                             </ul>
-                          </div>
+                        </div>
+                        <div class="card card-person box-sh senat" style="width: 75%; margin: auto;">
+                            <div class="control">
+                                <span class="prev"><i class="fa-solid fa-arrow-left"></i></span>
+                                <span class="center">Senatorlar</span>
+                                <span class="next"><i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" height="400" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mark Ruffo</h5>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Tel nomer: 996634474</li>
+                                <li class="list-group-item">Email: admin@gmail.com</li>
+                                <li class="list-group-item">faks: 985 1454 7474</li>
+                            </ul>
+                        </div>
+                        <div class="card card-person box-sh senat" style="width: 75%; margin: auto;">
+                            <div class="control">
+                                <span class="prev"><i class="fa-solid fa-arrow-left"></i></span>
+                                <span class="center">Senatorlar</span>
+                                <span class="next"><i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                            <img src="https://expertphotography.b-cdn.net/wp-content/uploads/2018/11/blurred-background-portrait-porttrait.jpg" height="400" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mark Ruffo</h5>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Tel nomer: 996634474</li>
+                                <li class="list-group-item">Email: admin@gmail.com</li>
+                                <li class="list-group-item">faks: 985 1454 7474</li>
+                            </ul>
+                        </div>
+                        <div class="card card-person box-sh senat" style="width: 75%; margin: auto;">
+                            <div class="control">
+                                <span class="prev"><i class="fa-solid fa-arrow-left"></i></span>
+                                <span class="center">Senatorlar</span>
+                                <span class="next"><i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                            <img src="https://mktmediadev.wallstreetenglish.com/main_header_caucasian_man_blue_andrea2_small_bb52b9baff.jpg" height="400" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mark Ruffo</h5>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Tel nomer: 996634474</li>
+                                <li class="list-group-item">Email: admin@gmail.com</li>
+                                <li class="list-group-item">faks: 985 1454 7474</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-12 ">
                         <div class="card box-sh" style="width: 75%; margin: auto;">
@@ -169,5 +181,25 @@
             </form>
         </div>
     {% include "../footer/footer.html" %}
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+        $(document).ready(function(){
+            $(".next").on("click", function(){
+                let nowCard = $(".is_active");
+                let nextCard = nowCard.next();
+                if(nextCard.length){
+                    nowCard.removeClass("is_active").css('z-index', -10);
+                    nextCard.addClass("is_active").css('z-index', 10);
+                }
+            });
+            $(".prev").on("click", function(){
+                let nowCard = $(".is_active");
+                let prevCard = nowCard.prev();
+                if(prevCard.length){
+                    nowCard.removeClass("is_active").css('z-index', -10);
+                    prevCard.addClass("is_active").css('z-index', 10);
+                }
+            })
+        })
+        </script>
 {% endblock content %}
