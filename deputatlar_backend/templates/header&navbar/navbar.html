@@ -41,16 +41,35 @@
             <div class="hoverdrop">
                 <a href="#" class="dropbtn">Кенгаши котибияти</a>
                 <div class="all-links">
-                  <div class="left">
-                      <a href="#">Tashkil topishi</a>
-                      <!-- <a href="#">link 2</a>
-                      <a href="#">link 3</a> -->
-                  </div>
-                  <div class="right">
-                      <a href="#">Faoliyati</a>
-                      <!-- <a href="#">link 2</a>
-                      <a href="#">link 3</a> -->
-                  </div>
+                    <div class="grid-con">
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">Tashkil Topishi</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">Faoliati</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
           </li>
@@ -73,12 +92,12 @@
           </li>
           <li class="nav-item">
             <div class="hoverdrop">
-                <a href="#" class="dropbtn">Кенгаши доимий комиссиялари</a>
+                <a href="{% url 'app:DK' %}" class="dropbtn">Кенгаши доимий комиссиялари</a>
                 <div class="all-links">
                     <div class="grid-con">
                         {% for i in komissia %}
                             <div class="grid-item">
-                                <a href="#">{{ i.name|truncatechars:20 }}</a>
+                                <a href="{% url 'app:None' %}">{{ i.name|truncatechars:50 }}</a>
                             </div>
                         {% endfor %}
                       </div>
@@ -87,12 +106,12 @@
           </li>
           <li class="nav-item">
             <div class="hoverdrop">
-                <a href="#" class="dropbtn">Туман ва шаҳар Кенгаши котибияти</a>
+                <a href="{% url 'app:None' %}" class="dropbtn">Туман ва шаҳар Кенгаши котибияти</a>
                 <div class="all-links">
                   <div class="grid-con">
                     {% for i in tum %}
                         <div class="grid-item">
-                            <a href="#">{{ i.name }}</a>
+                            <a href="{% url 'app:None' %}">{{ i.name }}</a>
                         </div>
                     {% endfor %}
                   </div>
@@ -129,41 +148,79 @@
           </li>
           <li class="nav-item">
             <div class="hoverdrop">
-                <a href="#" class="dropbtn">Туман ва шаҳар Кенгаши доимий комиссиялари</a>
+                <a href="{% url 'app:None' %}" class="dropbtn">Туман ва шаҳар Кенгаши доимий комиссиялари</a>
                 <div class="all-links">
-                  <div class="left">
-                      <a href="#">link 1</a>
-                      <a href="#">link 2</a>
-                      <a href="#">link 3</a>
-                  </div>
-                  <div class="right">
-                      <a href="#">link 1</a>
-                      <a href="#">link 2</a>
-                      <a href="#">link 3</a>
-                  </div>
+                    <div class="grid-con">
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
           </li>
           <li class="nav-item">
             <div class="hoverdrop">
-                <a href="#" class="dropbtn">депутатлар фаолияти</a>
+                <a href="{% url 'app:None' %}" class="dropbtn">депутатлар фаолияти</a>
                 <div class="all-links">
-                  <div class="left">
-                      <a href="#">link 1</a>
-                      <a href="#">link 2</a>
-                      <a href="#">link 3</a>
-                  </div>
-                  <div class="right">
-                      <a href="#">link 1</a>
-                      <a href="#">link 2</a>
-                      <a href="#">link 3</a>
-                  </div>
+                    <div class="grid-con">
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                        <div class="grid-item">
+                            <a href="{% url 'app:None' %}">SomeWhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
           </li>
           <li class="nav-item">
             <div class="hoverdrop">
-                <a href="#" class="dropbtn">Кенгаши ҳужжатлари</a>
+                <a href="{% url 'app:None' %}" class="dropbtn">Кенгаши ҳужжатлари</a>
                 <div class="all-links">
                   <div class="left">
                       <a href="{% url 'app:WP' %}">Ish reja</a>
@@ -171,8 +228,8 @@
                       <a href="#">link 3</a> -->
                   </div>
                   <div class="right">
-                      <!-- <a href="#">link 1</a>
-                      <a href="#">link 2</a>
+                      <a href="{% url 'app:None' %}">link 1</a>
+                      <!-- <a href="#">link 2</a>
                       <a href="#">link 3</a> -->
                   </div>
                 </div>

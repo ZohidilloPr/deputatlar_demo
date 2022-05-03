@@ -1,3 +1,6 @@
+
+
+
 let com = document.getElementById("comment")
 let btn = document.getElementById("tkbtn")
 let exit = document.getElementById("tkexit")
@@ -79,4 +82,4 @@ nav4.addEventListener("click", function(){
     map2.style.display = "none";
     map3.style.display = "none";
     map4.style.display = "block";
-})
+});

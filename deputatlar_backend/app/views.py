@@ -1,13 +1,27 @@
 from django.shortcuts import render
 from .models import *
-# Create your views here.
+# Create your views here
 
-tumvash = TownsName.objects.all()
+
+list = [1, 2, 3, 4, 5]
+blogs = Blogs.objects.all()
+partia = Partia.objects.all() 
+senator = Senator.objects.all()
+deputat = Deputat.objects.all()
 komisia = Komissia.objects.all()
+tumvash = TownsName.objects.all()
+komisiaAzo = KomissiaAzo.objects.all()
+
 def Home(request):
+    last_blog = blogs.order_by("-add_date")
+    five_blogs = blogs.order_by("-id")[::-5]
     context = {
+        "list":list,
         "tum": tumvash,
+        "five":five_blogs,
+        "senator":senator,
         "komissia":komisia,
+        "last_blog":last_blog,
     }
     return render(request, 'pages/home.html', context)
 def Xodimlar(request):
@@ -31,6 +45,7 @@ def doimiy_komisalar(request):
     context = {
         "tum": tumvash,
         "komissia":komisia,
+        "list": list,
     }
     return render(request, 'pages/doimiy_komisia.html', context)
 
@@ -38,6 +53,7 @@ def all_blog(request):
     context = {
         "tum": tumvash,
         "komissia":komisia,
+        'list':list,
     }
     return render(request, 'pages/all_blogs.html', context)
 
@@ -54,6 +70,13 @@ def cv(request):
         "komissia":komisia,
     }
     return render(request, 'pages/full_cv.html', context)
+
+def Empty(request):
+    context = {
+        "tum": tumvash,
+        "komissia":komisia,
+    }
+    return render(request, 'pages/none.html', context)
 
 
 
