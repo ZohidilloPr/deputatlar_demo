@@ -39,7 +39,7 @@ def all_blog(request):
         "tum": tumvash,
         "komissia":komisia,
     }
-    return render(request, 'pages/all_blogs.html', content)
+    return render(request, 'pages/all_blogs.html', context)
 
 def Work_plan(request):
     context = {
