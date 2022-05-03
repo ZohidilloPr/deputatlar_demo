@@ -11,6 +11,15 @@
     hr{
         margin: 30px 0;
     }
+    /* .list-group li{
+        border-bottom: 3px solid blue;
+    } */
+    li a{
+        color: black;
+    }
+    li a:hover{
+        color: blue;
+    }
 </style>
     {% include '../header&navbar/navbar.html' %}
     <div class="main-box">
@@ -18,136 +27,73 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mt-5">
                 <div class="sidebarnav">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Maxalliy budjet, iqsodiy isloxatlarni amlga oshirish, investitsalar va tadbirkorlik rivojlantirish masalalari boyicha doimiy komisia</a></li>
-                        <li class="list-group-item"><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ex amet ipsam soluta numquam facere sunt expedita eos alias ullam?</a></li>
-                        <li class="list-group-item"><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ex amet ipsam soluta numquam facere sunt expedita eos alias ullam?</a></li>
-                        <li class="list-group-item"><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ex amet ipsam soluta numquam facere sunt expedita eos alias ullam?</a></li>
-                        <li class="list-group-item"><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ex amet ipsam soluta numquam facere sunt expedita eos alias ullam?</a></li>
-                        <li class="list-group-item"><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ex amet ipsam soluta numquam facere sunt expedita eos alias ullam?</a></li>
-                        <li class="list-group-item"><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ex amet ipsam soluta numquam facere sunt expedita eos alias ullam?</a></li>
-                        <li class="list-group-item"><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ex amet ipsam soluta numquam facere sunt expedita eos alias ullam?</a></li>
+                        {% for i in komissia %}
+                            <li class="list-group-item ">
+                                <a href="#" class="">
+                                    {{ i.name }}        
+                                </a>
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 mt-3">
-                <hr>
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-4">
-                      <div class="col-img w-75 m-auto">
-                          <img class="img-fluid" src="https://st2.depositphotos.com/3143277/8644/i/600/depositphotos_86446164-stock-photo-business-man-in-office.jpg" alt="">
-                      </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-8">
-                      <div class="col-body">
-                        <div class="col-title">
-                            <h3>Komisia Rayisi</h3>
-                            <h2>Jhon Doe</h2>
-                            <div class="border-bottom border-primary w-25">
-
+                <div class="card_box">
+                    {% for i in list %}
+                    <!-- <hr> -->
+                    <!-- <div class="row">
+                        <div class="col-12 col-sm-12 col-md-4">
+                            <div class="col-img w-75 m-auto">
+                                <img class="img-fluid" src="https://st2.depositphotos.com/3143277/8644/i/600/depositphotos_86446164-stock-photo-business-man-in-office.jpg" alt="">
                             </div>
                         </div>
-                          <table class="table">
-                              <tr>
-                                  <td>lavozimi</td>
-                                  <td>"YANGIYOL YOG'-MOY" AJ Iqsodiy masalalar boyicha mutaxasis</td>
-                              </tr>
-                              <tr>
-                                <td>saylangan saylov okrugi</td>
-                                <td>
-                                    <span>(+998) 99 863 45-55 </span>
-                                </td>
-                              </tr>
-                              <tr>
-                                  <td>Electron pochta</td>
-                                  <td>admin@gmail.com</td>
-                              </tr>
-                              <tr>
-                                  <td>Faks</td>
-                                  <td><span>(+998) 99 863 45-55 </span></td>
-                              </tr>
-                          </table>
-                      </div>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-4">
-                      <div class="col-img w-75 m-auto">
-                          <img class="img-fluid" src="https://st2.depositphotos.com/3143277/8644/i/600/depositphotos_86446164-stock-photo-business-man-in-office.jpg" alt="">
-                      </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-8">
-                      <div class="col-body">
-                        <div class="col-title">
-                            <h3>Komisia Azosi</h3>
-                            <h2>Mark Hoskins</h2>
-                            <div class="border-bottom border-primary w-25">
+                        <div class="col-12 col-sm-12 col-md-8">
+                            <div class="col-body">
+                                <div class="col-title">
+                                    <h3>Komisia Rayisi</h3>
+                                    <h2>Jhon Doe</h2>
+                                    <div class="border-bottom border-primary w-25">
 
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <tr>
+                                        <td>lavozimi</td>
+                                        <td>"YANGIYOL YOG'-MOY" AJ Iqsodiy masalalar boyicha mutaxasis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>saylangan saylov okrugi</td>
+                                        <td>
+                                            <span>(+998) 99 863 45-55 </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Electron pochta</td>
+                                        <td>admin@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Faks</td>
+                                        <td><span>(+998) 99 863 45-55 </span></td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                          <table class="table">
-                              <tr>
-                                  <td>lavozimi</td>
-                                  <td>"YANGIYOL YOG'-MOY" AJ Iqsodiy masalalar boyicha mutaxasis</td>
-                              </tr>
-                              <tr>
-                                <td>saylangan saylov okrugi</td>
-                                <td>
-                                    <span>(+998) 99 863 45-55 </span>
-                                </td>
-                              </tr>
-                              <tr>
-                                  <td>Electron pochta</td>
-                                  <td>admin@gmail.com</td>
-                              </tr>
-                              <tr>
-                                  <td>Faks</td>
-                                  <td><span>(+998) 99 863 45-55 </span></td>
-                              </tr>
-                          </table>
-                      </div>
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-4">
-                      <div class="col-img w-75 m-auto">
-                          <img class="img-fluid" src="https://st2.depositphotos.com/3143277/8644/i/600/depositphotos_86446164-stock-photo-business-man-in-office.jpg" alt="">
-                      </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-8">
-                      <div class="col-body">
-                        <div class="col-title">
-                            <h3>Komisia Azosi</h3>
-                            <h2>Jhon Doe</h2>
-                            <div class="border-bottom border-primary w-25">
-
+                    </div> -->
+                        <hr>
+                        <div class="cards-box">
+                            <div class="box-img">
+                                <img src="https://st2.depositphotos.com/3143277/8644/i/600/depositphotos_86446164-stock-photo-business-man-in-office.jpg" alt="">
+                            </div>
+                            <div class="box-body">
+                                <h3>Jhon Doe</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, expedita?
+                                </p>
+                                <a href="#">Full Data</a>
                             </div>
                         </div>
-                          <table class="table">
-                              <tr>
-                                  <td>lavozimi</td>
-                                  <td>"YANGIYOL YOG'-MOY" AJ Iqsodiy masalalar boyicha mutaxasis</td>
-                              </tr>
-                              <tr>
-                                <td>saylangan saylov okrugi</td>
-                                <td>
-                                    <span>(+998) 99 863 45-55 </span>
-                                </td>
-                              </tr>
-                              <tr>
-                                  <td>Electron pochta</td>
-                                  <td>admin@gmail.com</td>
-                              </tr>
-                              <tr>
-                                  <td>Faks</td>
-                                  <td><span>(+998) 99 863 45-55 </span></td>
-                              </tr>
-                          </table>
-                      </div>
-                  </div>
-                </div>
-                <hr>
+                        {% endfor %}
+                    </div>
             </div>
         </div>
     </div>

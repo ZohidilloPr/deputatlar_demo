@@ -93,7 +93,7 @@ p{
 .all-links{
 	display: none;
 	position: absolute;
-	background-color: rgba(2, 54, 77, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 1;	
     width: 80%;
     left: 10%;
@@ -109,14 +109,16 @@ p{
     transition: 1s;
 	padding: 10px 20px;
 	text-decoration: none;
-    /* border: 1px solid red; */
+    /* animation-name: border;
+    animation-duration: 4s;
+    border: 1px solid red; */
 }
 .hoverdrop:hover .all-links{
 	display: table;
 }
 .all-links a:hover{
     text-shadow: 0 0 20px white;
-    background-color: #123456;
+    background: linear-gradient(to right, #123, #333);
 }
 .footer{
     padding: 0 20px;
@@ -318,6 +320,19 @@ tr td:nth-child(odd){
 .prev, .next{
     z-index: 100;
     cursor: pointer;
+}
+.card_box{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.cards-box{
+    border: 1px solid salmon;
+    width: 25%;
+}
+.box-img img{
+    width: 100%;
+    height: auto;
 }
 @media screen and (min-width: 320px) and (max-width: 480px){
     .main-box{

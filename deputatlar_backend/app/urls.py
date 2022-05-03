@@ -8,18 +8,20 @@ from .views import (
     all_blog,
     Work_plan,
     cv,
+    Empty
 )
 
 app_name = 'app'
 
 urlpatterns = [
-    path('', Home, name="Home"),
-    path('all/xodimlar/', Xodimlar, name="all_xodim"),
-    path('tuman/xodimlar/', tuman_xodimlar, name="tuman_xodim"),
-    path('bloger', admin, name="admin"),
-    path('komisia/doimiy/', doimiy_komisalar, name="DK"),
-    path('all/blogs/', all_blog, name="AB"),
-    path('ish/reja/', Work_plan, name="WP"),
     path('cv/', cv, name="cv"),
+    path('', Home, name="Home"),
+    path('none/', Empty, name="None"),
+    path('bloger', admin, name="admin"),
+    path('ish/reja/', Work_plan, name="WP"),
+    path('all/blogs/', all_blog, name="AB"),
+    path('all/xodimlar/', Xodimlar, name="all_xodim"),
+    path('komisia/doimiy/', doimiy_komisalar, name="DK"),
+    path('tuman/xodimlar/', tuman_xodimlar, name="tuman_xodim"),
 ]
 
