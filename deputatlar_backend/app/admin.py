@@ -7,7 +7,8 @@ from .models import (
     Partia,
     Blogs,
     Senator,
-    Taklif
+    Taklif,
+    Files,
 )
 # Register your models here.
 
@@ -19,3 +20,4 @@ admin.site.register(Partia)
 admin.site.register(Blogs)
 admin.site.register(Senator)
 admin.site.register(Taklif)
+admin.site.register(Files)

@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 # Create your models here.
@@ -80,3 +81,12 @@ class Taklif(models.Model):
     
     def __str__(self):
         return self.subject
+    
+class Files(models.Model):
+    name = models.CharField(_("Fayl nomi"), max_length=500)
+    file = models.FileField(_("Fayl"), upload_to='Xujjatlar')
+    upload_date = models.DateTimeField(_("Yuklangan vaqti"), auto_now_add=True)
+    
+    def __str__(self):
+        return self.name
+    

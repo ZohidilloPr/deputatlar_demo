@@ -1,3 +1,4 @@
+from msilib.schema import File
 from pyexpat import model
 from django.shortcuts import render
 from .models import *
@@ -6,6 +7,7 @@ from django.views.generic import DetailView
 
 
 list = [1, 2, 3, 4, 5]
+file = Files.objects.all()
 blogs = Blogs.objects.all()
 partia = Partia.objects.all()
 senator = Senator.objects.all()
@@ -68,6 +70,7 @@ class BlogDetailView(DetailView):
 
 def Work_plan(request):
     context = {
+        "files": file,
         "tum": tumvash,
         "komissia":komisia,
     }
