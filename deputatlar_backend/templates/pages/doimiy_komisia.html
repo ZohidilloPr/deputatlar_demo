@@ -38,10 +38,9 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 mt-3">
-                <div class="card_box">
-                    {% for i in list %}
-                    <!-- <hr> -->
-                    <!-- <div class="row">
+                {% for i in list %}
+                    <hr>
+                    <div class="row">
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="col-img w-75 m-auto">
                                 <img class="img-fluid" src="https://st2.depositphotos.com/3143277/8644/i/600/depositphotos_86446164-stock-photo-business-man-in-office.jpg" alt="">
@@ -78,22 +77,8 @@
                                 </table>
                             </div>
                         </div>
-                    </div> -->
-                        <hr>
-                        <div class="cards-box">
-                            <div class="box-img">
-                                <img src="https://st2.depositphotos.com/3143277/8644/i/600/depositphotos_86446164-stock-photo-business-man-in-office.jpg" alt="">
-                            </div>
-                            <div class="box-body">
-                                <h3>Jhon Doe</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, expedita?
-                                </p>
-                                <a href="#">Full Data</a>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
+                    </div>                       
+                {% endfor %}
             </div>
         </div>
     </div>

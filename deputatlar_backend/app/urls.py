@@ -8,7 +8,8 @@ from .views import (
     all_blog,
     Work_plan,
     cv,
-    Empty
+    Empty,
+    BlogDetailView,
 )
 
 app_name = 'app'
@@ -22,6 +23,7 @@ urlpatterns = [
     path('all/blogs/', all_blog, name="AB"),
     path('all/xodimlar/', Xodimlar, name="all_xodim"),
     path('komisia/doimiy/', doimiy_komisalar, name="DK"),
+    path('blogs/blog/<pk>/', BlogDetailView.as_view(), name="BD"),
     path('tuman/xodimlar/', tuman_xodimlar, name="tuman_xodim"),
 ]
 

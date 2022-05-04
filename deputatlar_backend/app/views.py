@@ -1,5 +1,7 @@
+from pyexpat import model
 from django.shortcuts import render
 from .models import *
+from django.views.generic import DetailView
 # Create your views here
 
 
@@ -59,12 +61,10 @@ def all_blog(request):
         'list':list,
     }
     return render(request, 'pages/all_blogs.html', context)
-def one_blog(request):
-    context = {
-        "blogs":blogs,
-        "tum":tumvash,
-        "komisia":komisia,
-    }
+
+class BlogDetailView(DetailView):
+    model = Blogs
+    template_name = 'pages/blog.html'
 
 def Work_plan(request):
     context = {
