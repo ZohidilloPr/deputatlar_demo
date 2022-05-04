@@ -5,7 +5,7 @@ from .models import *
 
 list = [1, 2, 3, 4, 5]
 blogs = Blogs.objects.all()
-partia = Partia.objects.all() 
+partia = Partia.objects.all()
 senator = Senator.objects.all()
 deputat = Deputat.objects.all()
 komisia = Komissia.objects.all()
@@ -26,6 +26,8 @@ def Home(request):
     return render(request, 'pages/home.html', context)
 def Xodimlar(request):
     context = {
+        "senator":senator,
+        "deputat":deputat,
         "tum": tumvash,
         "komissia":komisia,
     }
@@ -33,6 +35,7 @@ def Xodimlar(request):
 
 def tuman_xodimlar(request):
     context = {
+        "deputat":deputat,
         "tum": tumvash,
         "komissia":komisia,
     }
@@ -56,6 +59,12 @@ def all_blog(request):
         'list':list,
     }
     return render(request, 'pages/all_blogs.html', context)
+def one_blog(request):
+    context = {
+        "blogs":blogs,
+        "tum":tumvash,
+        "komisia":komisia,
+    }
 
 def Work_plan(request):
     context = {
@@ -77,12 +86,3 @@ def Empty(request):
         "komissia":komisia,
     }
     return render(request, 'pages/none.html', context)
-
-
-
-
-
-
-
-
-
