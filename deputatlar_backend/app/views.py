@@ -1,7 +1,8 @@
-from msilib.schema import File
-from pyexpat import model
-from django.shortcuts import render
+import os
+from django.conf import settings
+from django.http import Http404, HttpResponse
 from .models import *
+from django.shortcuts import render
 from django.views.generic import DetailView
 # Create your views here
 
@@ -30,17 +31,17 @@ def Home(request):
     return render(request, 'pages/home.html', context)
 def Xodimlar(request):
     context = {
+        "tum": tumvash,
         "senator":senator,
         "deputat":deputat,
-        "tum": tumvash,
         "komissia":komisia,
     }
     return render(request, 'pages/xodimlar.html', context)
 
 def tuman_xodimlar(request):
     context = {
-        "deputat":deputat,
         "tum": tumvash,
+        "deputat":deputat,
         "komissia":komisia,
     }
     return render(request, 'pages/tuman_deputatlari.html', context)
@@ -50,17 +51,17 @@ def admin(request):
 
 def doimiy_komisalar(request):
     context = {
+        "list": list,
         "tum": tumvash,
         "komissia":komisia,
-        "list": list,
     }
     return render(request, 'pages/doimiy_komisia.html', context)
 
 def all_blog(request):
     context = {
+        'list':list,
         "tum": tumvash,
         "komissia":komisia,
-        'list':list,
     }
     return render(request, 'pages/all_blogs.html', context)
 
@@ -76,6 +77,14 @@ def Work_plan(request):
     }
     return render(request, 'pages/ish_reja.html', context)
 
+def download_files(request, path):
+    file_path = os.path.join(settings.MEDIA_ROOT, path)
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as ft:
+            response=HttpResponse(ft.read(), content_type="application/adminupload")
+            response['Content-Disposition'] = 'inline,filename='+os.path.basename(file_path)
+            return response
+        raise Http404
 def cv(request):
     context = {
         "tum": tumvash,
@@ -89,3 +98,4 @@ def Empty(request):
         "komissia":komisia,
     }
     return render(request, 'pages/none.html', context)
+

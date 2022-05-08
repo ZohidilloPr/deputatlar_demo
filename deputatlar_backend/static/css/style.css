@@ -321,6 +321,47 @@ tr td:nth-child(odd){
     z-index: 100;
     cursor: pointer;
 }
+.file-box{
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.file-box span{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+.file-box .view, .file-box .download{
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    background: linear-gradient(rgba(50,50,50,0.1), rgba(50,50,50,0.1), rgba(50,50,50,0.1));
+    /* border: 1px solid red; */
+}
+.file-box .view{
+    top: 0;
+    left: 0;
+}
+.file-box .download{
+    top: 0;
+    right: 0;
+}
+.file-box .view:hover, .file-box .download:hover{
+    border: 1px solid darkslategray;
+    background: linear-gradient(rgba(50,50,50,0.2), rgba(50,50,50,0.2), rgba(50,50,50,0.2));
+
+}
+.view svg, .download svg{
+    width: 100%;
+    height: 100%;
+    color: lightslategray;
+}
+.view svg:hover, .download svg:hover{
+    color: darkslategrey;
+}
 @media screen and (min-width: 320px) and (max-width: 480px){
     .main-box{
         width: 100%;

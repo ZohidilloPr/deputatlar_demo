@@ -9,15 +9,34 @@
     <div class="main-box">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-3 mt-3">
-                {% include "../left_side/work_plan.html" %}
+                {% include "../left_side/left_side.html" %}
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-6 mt-3">
                 <div class="row">
                     <div class="col-12 mb-5">
                         {% for i in files %}  
-                            {{i.file.url}}
-                            <embed cl
-                            ass="w-100" height="900" src="{{ i.file.url }}" type="text/pdf">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3 box-sh p-4 file-box">
+                                <span>
+                                    {{i.name}}
+                                    <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ex dolorum nesciunt excepturi cupiditate tenetur quisquam incidunt voluptate impedit aut? -->
+                                </span>
+                                <div class="view">
+                                    <a href="{{ i.file.url }}" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                        </svg>                                        
+                                    </a>
+                                </div>
+                                <div class="download">
+                                    <a href="" download="{{ i.file.url }}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+                                            <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
+                                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         {% endfor %}
                     </div>
                 </div>
@@ -25,5 +44,18 @@
         </div>
     </div>
     {% include "../footer/footer.html" %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(".file-box").mouseover(function(){
+            $(".view").css("display", "block")
+            $(".download").css("display", "block")
+            $(".file-box").css("border", "1px solid black")
+        })
+        $(".file-box").mouseout(function(){
+            $(".view").css("display", "none")
+            $(".download").css("display", "none")
+            $(".file-box").css("border", "none")
+        })
+    </script>
 
 {% endblock content %}
