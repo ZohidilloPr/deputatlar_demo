@@ -29,7 +29,7 @@
                     <ul class="list-group">
                         {% for i in komissia %}
                             <li class="list-group-item ">
-                                <a href="#" class="">
+                                <a href="{% url 'app:DK' pk=i.pk %}" class="">
                                     {{ i.name }}        
                                 </a>
                             </li>
@@ -38,19 +38,19 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 mt-3">
-                {% for i in list %}
+                {% for i in kam_azo %}
                     <hr>
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-4">
                             <div class="col-img w-75 m-auto">
-                                <img class="img-fluid" src="https://st2.depositphotos.com/3143277/8644/i/600/depositphotos_86446164-stock-photo-business-man-in-office.jpg" alt="">
+                                <img class="img-fluid" src="{{ i.azo_img.url }}" alt="">
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-8">
                             <div class="col-body">
                                 <div class="col-title">
-                                    <h3>Komisia Rayisi</h3>
-                                    <h2>Jhon Doe</h2>
+                                    <h3>{{ i.lavozim_type }}</h3>
+                                    <h2>{{ i.f_name }}</h2>
                                     <div class="border-bottom border-primary w-25">
 
                                     </div>
@@ -58,22 +58,22 @@
                                 <table class="table">
                                     <tr>
                                         <td>lavozimi</td>
-                                        <td>"YANGIYOL YOG'-MOY" AJ Iqsodiy masalalar boyicha mutaxasis</td>
+                                        <td>{{ i.lavozim_now }}</td>
                                     </tr>
                                     <tr>
                                         <td>saylangan saylov okrugi</td>
                                         <td>
-                                            <span>(+998) 99 863 45-55 </span>
+                                            <span>(+998) {{ i.number }} </span>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Electron pochta</td>
-                                        <td>admin@gmail.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Faks</td>
-                                        <td><span>(+998) 99 863 45-55 </span></td>
-                                    </tr>
+<!--                                    <tr>-->
+<!--                                        <td>Electron pochta</td>-->
+<!--                                        <td>admin@gmail.com</td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td>Faks</td>-->
+<!--                                        <td><span>(+998) 99 863 45-55 </span></td>-->
+<!--                                    </tr>-->
                                 </table>
                             </div>
                         </div>

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #local apps
     'app.apps.AppConfig',
-    #global apps
+    'api.apps.ApiConfig'
 ]
 
 REST_FRAMEWORKS = {

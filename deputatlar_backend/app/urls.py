@@ -22,8 +22,8 @@ urlpatterns = [
     path('ish/reja/', Work_plan, name="WP"),
     path('all/blogs/', all_blog, name="AB"),
     path('all/xodimlar/', Xodimlar, name="all_xodim"),
-    path('komisia/doimiy/', doimiy_komisalar, name="DK"),
+    path('komisia/doimiy/<int:pk>/', doimiy_komisalar, name="DK"),
     path('blogs/blog/<pk>/', BlogDetailView.as_view(), name="BD"),
-    path('tuman/xodimlar/', tuman_xodimlar, name="tuman_xodim"),
+    path('tuman/xodimlar/<int:pk>/', tuman_xodimlar, name="TX"),
 ]
 

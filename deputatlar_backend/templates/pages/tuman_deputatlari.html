@@ -31,79 +31,63 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
               <div id="sidebarnav" class="box-sh">
                   <ul class="list-group">
-                      <li class="list-group-item now"><a href="#" class="">Angeren Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                      <li class="list-group-item"><a href="#">Tuman Shaxar</a></li>
-                    </ul>
+                      {% for i in tum %}
+                          <li class="list-group-item now"><a href="{% url 'app:TX' pk=i.pk %}" class="">{{ i.name }}</a></li>
+                      {% endfor %}
+                  </ul>
               </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
-                <div class="row mb-3 box">
-                    <div class="col-4">
-                        <img src="https://www.pngitem.com/pimgs/m/106-1068071_black-person-png-black-man-business-png-transparent.png" width="300" class="img-fluid rounded-start" alt="">
+                {% for i in tum_dep %}
+                    <div class="row mb-3 box">
+                        <div class="col-4">
+                            <img src="{{ i.image.url }}" width="300" class="img-fluid rounded-start" alt="">
+                        </div>
+                        <div class="col-8 pt-5">
+                            <h4>{{ i.f_name }}</h4>
+                            <table class="table">
+                                <tr>
+                                    <td>Telefon raqami</td>
+                                    <td>+998 {{ i.phone }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>{{ i.email }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Faks</td>
+                                    <td>+998 {{ i.faks }}</td>
+                                </tr>
+                            </table>
+                            <span>
+                                <a href="{% url 'app:cv' %}">To'liq CV >>></a>
+                            </span>
+                        </div>
                     </div>
-                    <div class="col-8 pt-5">
-                        <h4>Jhon Doe</h4>
-                        <table class="table">
-                            <tr>
-                                <td>Telefon raqami</td>
-                                <td>+998 99 656 2858</td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td>admin@gmail.com</td>
-                            </tr>
-                            <tr>
-                                <td>Faks</td>
-                                <td>+998 99 656 2858</td>
-                            </tr>
-                        </table>
-                        <span>
-                            <a href="{% url 'app:cv' %}">To'liq CV >>></a>
-                        </span>
-                    </div>
-                </div>
-                <div class="row mb-3 box">
-                    <div class="col-8 pt-5">
-                        <h4>Jhon Doe</h4>
-                        <table class="table">
-                            <tr>
-                                <td>Telefon raqami</td>
-                                <td>+998 99 656 2858</td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td>admin@gmail.com</td>
-                            </tr>
-                            <tr>
-                                <td>Faks</td>
-                                <td>+998 99 656 2858</td>
-                            </tr>
-                        </table>
-                        <a href="{% url 'app:cv' %}">To'liq CV >>></a>
-                    </div>
-                    <div class="col-4">
-                        <img src="https://www.pngitem.com/pimgs/m/106-1068071_black-person-png-black-man-business-png-transparent.png" width="300" class="img-fluid rounded-start" alt="">
-                    </div>
-                </div>
+                {% endfor %}
+<!--                <div class="row mb-3 box">-->
+<!--                    <div class="col-8 pt-5">-->
+<!--                        <h4>Jhon Doe</h4>-->
+<!--                        <table class="table">-->
+<!--                            <tr>-->
+<!--                                <td>Telefon raqami</td>-->
+<!--                                <td>+998 99 656 2858</td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>Email</td>-->
+<!--                                <td>admin@gmail.com</td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>Faks</td>-->
+<!--                                <td>+998 99 656 2858</td>-->
+<!--                            </tr>-->
+<!--                        </table>-->
+<!--                        <a href="{% url 'app:cv' %}">To'liq CV >>></a>-->
+<!--                    </div>-->
+<!--                    <div class="col-4">-->
+<!--                        <img src="https://www.pngitem.com/pimgs/m/106-1068071_black-person-png-black-man-business-png-transparent.png" width="300" class="img-fluid rounded-start" alt="">-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>

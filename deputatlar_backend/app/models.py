@@ -8,6 +8,10 @@ lavozim = (
     ('Komissia rayisi o\'rinbosari', 'Komissia rayisi o\'rinbosari'),
     ('Komissia azolari', 'Komissia azolari'),
 )
+LANG = (
+    ('uz', 'UZ'),
+    ('уз', 'УЗ'),
+)
 class TownsName(models.Model):
     name = models.CharField(max_length=50, verbose_name="Tuman Nomi", unique=True)
     add_date = models.DateTimeField(auto_now_add=True)
@@ -65,6 +69,7 @@ class KomissiaAzo(models.Model):
         return self.f_name
     
 class Blogs(models.Model):
+    lang = models.CharField(verbose_name="Tilni tanlang", max_length=50, choices=LANG, default='uz')
     image = models.ImageField(verbose_name="Yangilik uchun rasim", upload_to='Blogs/')
     title = models.CharField(verbose_name="Sarlavha", unique=True, max_length=200)
     blog = models.TextField(verbose_name="Maqola")

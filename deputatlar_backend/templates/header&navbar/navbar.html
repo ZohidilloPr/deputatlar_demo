@@ -92,12 +92,12 @@
           </li>
           <li class="nav-item">
             <div class="hoverdrop">
-                <a href="{% url 'app:DK' %}" class="dropbtn">Кенгаши доимий комиссиялари</a>
+                <a href="" class="dropbtn">Кенгаши доимий комиссиялари</a>
                 <div class="all-links">
                     <div class="grid-con">
                         {% for i in komissia %}
                             <div class="grid-item">
-                                <a href="{% url 'app:None' %}">{{ i.name|truncatechars:50 }}</a>
+                                <a href="{% url 'app:DK' pk=i.pk %}">{{ i.name|truncatechars:50 }}</a>
                             </div>
                         {% endfor %}
                       </div>
@@ -111,12 +111,12 @@
                   <div class="grid-con">
                     {% for i in tum %}
                         <div class="grid-item">
-                            <a href="{% url 'app:None' %}">{{ i.name }}</a>
+                            <a href="{% url 'app:TX' pk=i.pk %}">{{ i.name }}</a>
                         </div>
                     {% endfor %}
                   </div>
                   <!-- <div class="left1">
-                      <a href="{% url 'app:tuman_xodim' %}">Angen Shaxar</a>
+                      <a href="#">Angen Shaxar</a>
                       <a href="#">Bo'ka tumani</a>
                       <a href="#">Bekobod tumani</a>
                       <a href="#">Bekobod Shaxri</a>
