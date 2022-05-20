@@ -9,6 +9,7 @@ from .models import (
     Senator,
     Taklif,
     Files,
+    Qisqa_yangiliklar,
 )
 # Register your models here.
 
@@ -21,3 +22,4 @@ admin.site.register(Blogs)
 admin.site.register(Senator)
 admin.site.register(Taklif)
 admin.site.register(Files)
+admin.site.register(Qisqa_yangiliklar)

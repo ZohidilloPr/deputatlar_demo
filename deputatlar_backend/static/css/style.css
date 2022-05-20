@@ -282,6 +282,9 @@ tr td:nth-child(odd){
     overflow: scroll;
     background-color: #eee;
 }
+.map-tab{
+    display: none;
+}
 .map a{
     font-size: 1.1em;
     color: #333;

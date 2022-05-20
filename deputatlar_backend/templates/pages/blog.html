@@ -7,12 +7,32 @@
 {% block content %}
     {% include "../header&navbar/navbar.html" %}
     <div class="main-box">
+        <nav aria-label="breadcrumb" class="ms-5 py-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'app:Home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'app:AB' %}">Hamma Maqolalar</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            </ol>
+        </nav>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mt-3">
                 {% include "../left_side/left_side.html" %}
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
-
+            <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
+                <div class="card my-3 box-sh" style="width: 85%; margin: auto;">
+                    <img src="{{ blog.image.url }}" height="380" class="card-img-top" alt="Img Test">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{% url 'app:BD' pk=blog.pk %}">
+                                {{ blog.title }}
+                            </a>
+                        </h5>
+                      <p class="card-text">
+                          {{ blog.blog }}
+                      </p>
+                      <p class="card-text"><small class="text-muted">{{ blog.add_date }}</small></p>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>

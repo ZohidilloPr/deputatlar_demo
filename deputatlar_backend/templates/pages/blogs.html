@@ -1,0 +1,42 @@
+{% extends "../index.html" %}
+
+{% block title %}
+    Hamma Maqolalar
+{% endblock title %}
+
+{% block content %}
+    {% include "../header&navbar/navbar.html" %}
+    <div class="main-box">
+        <nav aria-label="breadcrumb" class="ms-5 py-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'app:Home' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Hamma Maqolalar</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                {% include "../left_side/left_side.html" %}
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 mt-3">
+                {% for i in blogs %}
+                <div class="card mb-3 box-sh" style=" width: 80%; margin: auto; ">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="{{ i.image.url }}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="{% url 'app:BD' pk=i.pk %}">{{ i.title }}</a></h5>
+                                <p class="card-text"><small class="text-muted">{{ i.add_date }}</small></p>
+                                <p class="card-text">{{ i.blog | slice:100 }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% include "../footer/footer.html" %}
+  
+{% endblock content %}

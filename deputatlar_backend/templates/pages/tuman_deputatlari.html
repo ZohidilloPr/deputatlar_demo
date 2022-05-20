@@ -65,32 +65,17 @@
                         </div>
                     </div>
                 {% endfor %}
-<!--                <div class="row mb-3 box">-->
-<!--                    <div class="col-8 pt-5">-->
-<!--                        <h4>Jhon Doe</h4>-->
-<!--                        <table class="table">-->
-<!--                            <tr>-->
-<!--                                <td>Telefon raqami</td>-->
-<!--                                <td>+998 99 656 2858</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Email</td>-->
-<!--                                <td>admin@gmail.com</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Faks</td>-->
-<!--                                <td>+998 99 656 2858</td>-->
-<!--                            </tr>-->
-<!--                        </table>-->
-<!--                        <a href="{% url 'app:cv' %}">To'liq CV >>></a>-->
-<!--                    </div>-->
-<!--                    <div class="col-4">-->
-<!--                        <img src="https://www.pngitem.com/pimgs/m/106-1068071_black-person-png-black-man-business-png-transparent.png" width="300" class="img-fluid rounded-start" alt="">-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </div>
     </div>
     {% include "../footer/footer.html" %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("li").click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+        });
+    </script>
 
 {% endblock content %}

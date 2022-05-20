@@ -28,7 +28,7 @@ class Partia(models.Model):
 
 class Senator(models.Model):
     f_name = models.CharField(_("Senatorning to'liq ismi"), max_length=300)
-    senat_img = models.ImageField(_("Senator rasmi"), upload_to='senator_images/', height_field=400, width_field=None)
+    senat_img = models.ImageField(_("Senator rasmi"), upload_to='senator_images/')
     phone = models.IntegerField(_("Telefon raqami"))
     email = models.EmailField(_("E-Pochta manzili"), max_length=254)
     faks = models.IntegerField(_("Faks Nomeri"))
@@ -94,4 +94,11 @@ class Files(models.Model):
     
     def __str__(self):
         return self.name
-    
+
+class Qisqa_yangiliklar(models.Model):
+    title = models.CharField(max_length=200, verbose_name="Sarlovha")
+    xabar = models.TextField(verbose_name="Yangilik Mazmuni")
+    add_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title

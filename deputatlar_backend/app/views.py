@@ -1,9 +1,11 @@
 import os
+import random
 from .models import *
 from django.conf import settings
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import DetailView
 from django.http import Http404, HttpResponse
+from .forms import AddTaklifForm
 # Create your views here
 
 
@@ -15,13 +17,27 @@ senator = Senator.objects.all()
 deputat = Deputat.objects.all()
 komisia = Komissia.objects.all()
 tumvash = TownsName.objects.all()
+ran_ch = random.sample(set(blogs), 3)
 komisiaAzo = KomissiaAzo.objects.all()
+short_news = Qisqa_yangiliklar.objects.all()
+
 
 def Home(request):
-    last_blog = blogs.order_by("-add_date")
-    five_blogs = blogs.order_by("-id")[::-5]
+    short = short_news.latest("-add_date")
+    last_blog = blogs.latest("-add_date")
+    five_blogs = blogs.order_by("id")[::-5]
+    if request.method == "POST":
+        form = AddTaklifForm(request.POST)
+        if form.is_valid():
+            form.save()
+            redirect("app:Home")
+    form = AddTaklifForm
     context = {
+        "blogs":blogs,
         "list":list,
+        "form":form,
+        "short":short,
+        "rand": ran_ch,
         "tum": tumvash,
         "five":five_blogs,
         "senator":senator,
@@ -29,24 +45,35 @@ def Home(request):
         "last_blog":last_blog,
     }
     return render(request, 'pages/home.html', context)
+
 def Xodimlar(request):
+
+    short = short_news.latest("add_date")
     context = {
         "tum": tumvash,
         "senator":senator,
         "deputat":deputat,
         "komissia":komisia,
+        "short": short,
+        "rand": ran_ch,
+
     }
     return render(request, 'pages/xodimlar.html', context)
 
 def tuman_xodimlar(request, pk):
+
     tum_dep = Deputat.objects.filter(town=pk)
+    short = short_news.latest("add_date")
     town = TownsName.objects.all()
     context = {
-        "town":town,
+        "town": town,
         "tum": tumvash,
-        "deputat":deputat,
-        "tum_dep":tum_dep,
-        "komissia":komisia,
+        "deputat": deputat,
+        "tum_dep": tum_dep,
+        "komission": komisia,
+        "short": short,
+        "rand": ran_ch,
+
     }
     return render(request, 'pages/tuman_deputatlari.html', context)
 
@@ -55,32 +82,55 @@ def admin(request):
 
 def doimiy_komisalar(request, pk):
     kam_azo = KomissiaAzo.objects.filter(komissia=pk)
+    short = short_news.latest("add_date")
     komisia = Komissia.objects.all()
     context = {
         "list": list,
         "tum": tumvash,
         "komissia":komisia,
         "kam_azo":kam_azo,
+        "short": short,
+        "rand": ran_ch,
+
     }
     return render(request, 'pages/doimiy_komisia.html', context)
 
 def all_blog(request):
+    short = short_news.latest("add_date")
     context = {
-        'list':list,
+        'list': list,
         "tum": tumvash,
-        "komissia":komisia,
-    }
-    return render(request, 'pages/all_blogs.html', context)
+        "komissia": komisia,
+        "short": short,
+        "rand": ran_ch,
+        "blogs":blogs,
 
-class BlogDetailView(DetailView):
-    model = Blogs
-    template_name = 'pages/blog.html'
+    }
+    return render(request, 'pages/blogs.html', context)
+
+def BlogDetail(request, pk):
+    blog = blogs.get(pk=pk)
+    short = short_news.latest("add_date")
+    context = {
+        'list': list,
+        "blog":blog,
+        "tum": tumvash,
+        "komissia": komisia,
+        "short": short,
+        "rand": ran_ch,
+
+    }
+    return render(request, 'pages/blog.html', context)
 
 def Work_plan(request):
+    short = short_news.latest("add_date")
     context = {
         "files": file,
         "tum": tumvash,
         "komissia":komisia,
+        "short": short,
+        "rand": ran_ch,
+
     }
     return render(request, 'pages/ish_reja.html', context)
 
@@ -93,15 +143,23 @@ def download_files(request, path):
             return response
         raise Http404
 def cv(request):
+    short = short_news.latest("add_date")
     context = {
         "tum": tumvash,
         "komissia":komisia,
+        "short": short,
+        "rand": ran_ch,
+
     }
     return render(request, 'pages/full_cv.html', context)
 
 def Empty(request):
+    short = short_news.latest("add_date")
     context = {
         "tum": tumvash,
         "komissia":komisia,
+        "short":short,
+        "rand": ran_ch,
+
     }
     return render(request, 'pages/none.html', context)

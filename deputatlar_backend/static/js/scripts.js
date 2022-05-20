@@ -47,39 +47,40 @@ function removeClass(nav){
     nav.classList.remove("active");
 }
 
-nav1.addEventListener("click", function(){
-    nav1.classList.add("active")
-    nav2.classList.remove("active")
-    nav3.classList.remove("active")
-    nav4.classList.remove("active")
-    map1.style.display = "block";
-})
-
-nav2.addEventListener("click", function(){
-    nav2.classList.add("active")
-    nav1.classList.remove("active")
-    nav3.classList.remove("active")
-    nav4.classList.remove("active")
-    map1.style.display = "none";
-    map2.style.display = "block";
-})
-nav3.addEventListener("click", function(){
-    nav3.classList.add("active")
-    nav2.classList.remove("active")
-    nav1.classList.remove("active")
-    nav4.classList.remove("active")
-    map1.style.display = "none";
-    map2.style.display = "none";
-    map3.style.display = "block";
-})
-
-nav4.addEventListener("click", function(){
-    nav4.classList.add("active")
-    nav1.classList.remove("active")
-    nav3.classList.remove("active")
-    nav2.classList.remove("active")
-    map1.style.display = "none";
-    map2.style.display = "none";
-    map3.style.display = "none";
-    map4.style.display = "block";
-});
+//nav1.addEventListener("click", function(){
+//    nav1.classList.add("active")
+////    location.reload()
+//    nav2.classList.remove("active")
+//    nav3.classList.remove("active")
+//    nav4.classList.remove("active")
+//    map1.style.display = "block";
+//})
+//
+//nav2.addEventListener("click", function(){
+//    nav2.classList.add("active")
+//    nav1.classList.remove("active")
+//    nav3.classList.remove("active")
+//    nav4.classList.remove("active")
+//    map1.style.display = "none";
+//    map2.style.display = "block";
+//})
+//nav3.addEventListener("click", function(){
+//    nav3.classList.add("active")
+//    nav2.classList.remove("active")
+//    nav1.classList.remove("active")
+//    nav4.classList.remove("active")
+//    map1.style.display = "none";
+//    map2.style.display = "none";
+//    map3.style.display = "block";
+//})
+//
+//nav4.addEventListener("click", function(){
+//    nav4.classList.add("active")
+//    nav1.classList.remove("active")
+//    nav3.classList.remove("active")
+//    nav2.classList.remove("active")
+//    map1.style.display = "none";
+//    map2.style.display = "none";
+//    map3.style.display = "none";
+//    map4.style.display = "block";
+//});

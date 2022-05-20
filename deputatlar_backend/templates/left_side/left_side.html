@@ -1,34 +1,37 @@
 <div class="card text-dark bg-light mb-3 box-sh" style="width: 80%; margin: auto;">
     <div class="card-header"><b>Teskor yangiliklar</b></div>
     <div class="card-body">
-        <h5 class="card-title">Light card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title">{{ short.title }}</h5>
+        <p class="card-text">{{ short.xabar }}</p>
+        <small>{{ short.add_date }}</small>
     </div>
 </div>
 <div class="card text-dark bg-light mb-3 box-sh" style="width: 80%; margin: auto;">
-    <div class="card-header"><b>Eng ko'p o'qiladigan maqolalar</b></div>
+    <div class="card-header"><b>Taxminiy maqolalar</b></div>
     <!-- <div class="card-body">
         <h5 class="card-title">Yangiliklar</h5>    
     </div> -->
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <a href="#">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis odio cum fugiat reiciendis officiis.
-            </a><br>
-            <small class="text-secondary">03.20.2022</small>
-        </li>
-        <li class="list-group-item">
-            <a href="#">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates id officiis et culpa, deserunt dolorem.
-            </a><br>
-            <small class="text-secondary">03.20.2022</small>   
-        </li>
-        <li class="list-group-item">
-            <a href="#">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut illum aliquid atque sit assumenda nostrum.
-            </a>
-            <br>
-            <small class="text-secondary">03.20.2022</small>
-        </li>
+        {% for i in rand %}
+            <li class="list-group-item">
+                <a href="#">
+                    {{ i.title }}
+                </a><br>
+                <small class="text-secondary">{{ i.add_date }}</small>
+            </li>
+        {% endfor %}
+<!--        <li class="list-group-item">-->
+<!--            <a href="#">-->
+<!--                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates id officiis et culpa, deserunt dolorem.-->
+<!--            </a><br>-->
+<!--            <small class="text-secondary">03.20.2022</small>   -->
+<!--        </li>-->
+<!--        <li class="list-group-item">-->
+<!--            <a href="#">-->
+<!--                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut illum aliquid atque sit assumenda nostrum.-->
+<!--            </a>-->
+<!--            <br>-->
+<!--            <small class="text-secondary">03.20.2022</small>-->
+<!--        </li>-->
     </ul>
 </div>
