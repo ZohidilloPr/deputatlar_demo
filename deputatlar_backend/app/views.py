@@ -42,6 +42,7 @@ def Home(request):
         "five":five_blogs,
         "senator":senator,
         "komissia":komisia,
+        "deputat":deputat,
         "last_blog":last_blog,
     }
     return render(request, 'pages/home.html', context)

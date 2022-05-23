@@ -24,33 +24,59 @@
         </li>
     </ul>
     <div class="map">
-        <div class="map-tab">
-            <p>
-                <ul>
-                    <li>
-                        <a href="#">Tashkil Topishi</a>
-                    </li>
-                    <li>
-                        <a href="#">Faoliati</a>
-                    </li>
-                </ul>
-            </p>
-        </div>
-        <div class="map-tab">
-            <p>
-                Tab2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolorum error esse ex iure natus, nesciunt omnis quae quia recusandae rem repudiandae ut veniam voluptatem!
-            </p>
-        </div>
-        <div class="map-tab">
-            <p>
-                Tab3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolorum error esse ex iure natus, nesciunt omnis quae quia recusandae rem repudiandae ut veniam voluptatem!
-            </p>
-        </div>
-        <div class="map-tab">
-            <p>
-                Tab4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolorum error esse ex iure natus, nesciunt omnis quae quia recusandae rem repudiandae ut veniam voluptatem!
-            </p>
-        </div>
+        <ul class="map-tab">
+            <li>
+                <a href="#">Tashkil Topishi</a>
+            </li>
+            <li>
+                <a href="#">Faoliati</a>
+            </li>
+        </ul>
+        <ul class="map-tab">
+            {% for i in deputat %}
+                <li>
+                    <a href="{% url 'app:AX' %}">{{ i.f_name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="map-tab">
+            {% for i in komissia %}
+                <li>
+                    <a href="{% url 'app:DK' pk=i.pk %}">{{ i.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="map-tab">
+            {% for i in tum %}
+                <li>
+                    <a href="{% url 'app:TX' pk=i.pk %}">{{ i.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="map-tab">
+            {% for i in list %}
+                <li>
+                    <a href="{% url 'app:None' %}">Something</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="map-tab">
+            {% for i in list %}
+                <li>
+                    <a href="{% url 'app:None' %}">Something</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="map-tab">
+            <li>
+                <a href="{% url 'app:WP' %}">Ish reja</a>
+            </li>
+            {% for i in list %}
+                <li>
+                    <a href="{% url 'app:None' %}">Something</a>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
